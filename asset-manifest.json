@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Algorithm-Visualizer/static/css/main.2445de94.chunk.css",
+    "main.js": "/Algorithm-Visualizer/static/js/main.f4d7afeb.chunk.js",
+    "main.js.map": "/Algorithm-Visualizer/static/js/main.f4d7afeb.chunk.js.map",
+    "runtime-main.js": "/Algorithm-Visualizer/static/js/runtime-main.971f65e5.js",
+    "runtime-main.js.map": "/Algorithm-Visualizer/static/js/runtime-main.971f65e5.js.map",
+    "static/js/2.5e420acf.chunk.js": "/Algorithm-Visualizer/static/js/2.5e420acf.chunk.js",
+    "static/js/2.5e420acf.chunk.js.map": "/Algorithm-Visualizer/static/js/2.5e420acf.chunk.js.map",
+    "index.html": "/Algorithm-Visualizer/index.html",
+    "static/css/main.2445de94.chunk.css.map": "/Algorithm-Visualizer/static/css/main.2445de94.chunk.css.map",
+    "static/js/2.5e420acf.chunk.js.LICENSE.txt": "/Algorithm-Visualizer/static/js/2.5e420acf.chunk.js.LICENSE.txt",
+    "static/media/Node.css": "/Algorithm-Visualizer/static/media/triangletwo-right.d318941d.svg",
+    "static/media/index.css": "/Algorithm-Visualizer/static/media/sorting1.7c61886f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.971f65e5.js",
+    "static/js/2.5e420acf.chunk.js",
+    "static/css/main.2445de94.chunk.css",
+    "static/js/main.f4d7afeb.chunk.js"
+  ]
+}
