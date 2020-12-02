@@ -1,0 +1,135 @@
+/*       STYLING INFORMATION FOR SORTING VISUALIZER*/
+* {
+  font-family: consolas;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* header section style start*/
+#head-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  background-color: rgb(8, 45, 77);
+}
+.disabled {
+  background-color: rgb(77, 75, 75);
+  opacity: 0.2;
+  z-index: 10;
+}
+
+.head-section-button {
+  color: white;
+  background: none;
+  height: 85%;
+  width: 100%;
+  margin: 0.25vw 0.5vh;
+  padding: 0.25vw 0.5vh;
+  cursor: pointer;
+  border: none;
+  border: 1px solid white;
+}
+.head-section-button:hover:enabled {
+  background-color: rgb(36, 182, 255);
+}
+#slider-container {
+  display: flex;
+  width: 110%;
+  color: #fff;
+  margin: 0px 1em;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#slider {
+  margin: 1em;
+}
+#speed-slider-container {
+  display: flex;
+  width: 100%;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 1em;
+  overflow: hidden;
+}
+#speed-slider {
+  margin: 1em;
+}
+/* header section style end*/
+
+/* board section style start*/
+.container {
+  display: flex;
+  flex: 1;
+  padding: 8vh 10vh 0vh 10vh;
+  background: #fff;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar {
+  display: inline;
+  margin: 0px 0.5px;
+
+  width: 10%;
+  background-color: rgb(36, 182, 255);
+}
+/* board section style end*/
+/*footer section start*/
+#stop-div {
+  display: flex;
+  height: 3vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+#stop-button {
+  height: 100%;
+  font-size: 1rem;
+  width: 10vw;
+  color: #fff;
+  border: none;
+  background-color: gray;
+}
+#stop-button:hover:enabled {
+  background-color: red !important;
+  box-shadow: 0 0 10px red, 0 0 40px red, 0 0 80px red;
+}
+.bottom-base {
+  display: flex;
+  float: bottom;
+  width: 100vw;
+  flex-direction: column;
+  padding: auto;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(8, 45, 77);
+}
+.bottom-base span {
+  margin: auto;
+  font-size: 3em;
+  background-color: rgb(8, 45, 77);
+  color: #fff;
+}
+#switcher {
+  width: fit-content;
+  background: rgb(8, 45, 77);
+  margin: auto;
+  color: #fff;
+  font-size: 1em;
+  padding: 0.5vh 1vh;
+  cursor: pointer;
+  border-top: none;
+  border-bottom: none;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 4px;
+}
+#switcher:hover {
+  background-color: rgb(168, 9, 142);
+}
+/*footer style end*/

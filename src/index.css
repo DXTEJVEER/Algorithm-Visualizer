@@ -1,0 +1,245 @@
+/*CONTAINS STYLING INFORMATION FOR*/
+/* The loading animation you see first and then the selection Screen*/
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#loadingText {
+  height: 100vh;
+  width: 100vh;
+  animation: fading 4s ease-in-out;
+}
+#selectscreen {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  animation: fadeouting 1s ease-in-out;
+}
+#pathfinding-visualizer {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+#sorting-visualizer {
+  display: none;
+  height: 100vh;
+  flex-direction: column;
+  flex: 1;
+}
+#sorting-visualizer .container {
+  flex: 1;
+}
+#upper-board-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pathfinding-visualizer #upper-board-layer {
+  flex: 1;
+}
+
+#loadingUL {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#loadingUL span {
+  list-style: none;
+  text-align: center;
+  margin: 0px 20px;
+  font-size: 5em;
+  animation: animate 0.6s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+#loadingUL span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+#loadingUL span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#loadingUL span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+#loadingUL span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+#loadingUL span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+#loadingUL span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+#loadingUL span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+#loadingUL span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+#loadingUL span:nth-child(9) {
+  animation-delay: 0.9s;
+}
+#loadingUL span:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.SelectScreen_to_comp {
+  animation: toFullscreen 1s ease-in-out;
+}
+/* #pathfinding-sec::before {
+  background-color: #000;
+  z-index: -1;
+  opacity: 0;
+} */
+#pathfinding-sec {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  position: relative;
+  color: white;
+  background-color: #746;
+  font-size: 2em;
+  align-items: center;
+  justify-content: center;
+  background: url("project_source/images/pathfinding1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: top;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+#pathfinding-sec:hover {
+  display: flex;
+  background-color: #746;
+  text-shadow: #000;
+  height: 70%;
+  width: 100%;
+  font-size: 7em;
+  align-items: center;
+  justify-content: center;
+  background: url("project_source/images/pathfinding.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: default;
+}
+#sorting-sec {
+  display: flex;
+  position: relative;
+  background-color: rgba(19, 184, 218, 0.2);
+  color: white;
+  font-size: 2em;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: url("project_source/images/sorting1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+#sorting-sec:hover {
+  display: flex;
+  background-color: rgba(19, 184, 218, 0.2);
+  height: 70%;
+  width: 100%;
+  font-size: 7em;
+  align-items: center;
+  justify-content: center;
+  background: url("project_source/images/sorting.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  cursor: default;
+}
+/*Following two classes are added here for transition from one component to other*/
+.componentOpener {
+  animation: animOpen 1s linear;
+}
+.componentCloser {
+  animation: fout 1s ease-in-out;
+}
+@keyframes fadeouting {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+@keyframes toFullscreen {
+  0% {
+    min-height: 60%;
+  }
+  100% {
+    min-height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes animOpen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

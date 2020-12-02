@@ -1,0 +1,200 @@
+/* the basic node component i.e. div tag will have node class */
+.node {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(211, 211, 211);
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+.board {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  grid-template-columns: repeat(75, 1fr);
+  grid-gap: 0px;
+  justify-content: center;
+}
+.node-visited {
+  border: 1px solid rgb(146, 146, 146);
+  background-color: #e8e8e8;
+  animation: nodeChange 0.5s ease-in-out;
+  animation-iteration-count: 1;
+}
+.node-start {
+  background: url("../../images/triangletwo-right.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.node-end {
+  background: url("../../images/circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.node-shortestPath {
+  background-color: #f05454;
+  animation: shortestpathChange 1s ease-in-out;
+}
+.node-wall {
+  background-color: #222831;
+  border: 1px solid #222831;
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header button {
+  font-size: 1em;
+  color: white;
+  background: none;
+  height: 85%;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid white;
+}
+#pf-speed-container {
+  display: flex;
+  font-size: 1em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  height: 85%;
+  width: 100%;
+  margin: 0.25vw 0.5vh;
+  padding: 0.25vw 0.5vh;
+  border: 1px solid white;
+  cursor: default;
+}
+#prev-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+#prev-container:hover {
+  background-color: #f05454;
+}
+#next-container:hover {
+  background-color: #f05454;
+}
+#next-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+#prev {
+  height: 15px;
+  width: 15px;
+  transform: rotate(-45deg);
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+#next {
+  height: 15px;
+  width: 15px;
+  transform: rotate(135deg);
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+#box {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+#header button:hover:enabled {
+  background-color: #f05454;
+}
+.active-content {
+  background-color: #222831;
+}
+.disabled-content {
+  background-color: rgb(179, 107, 167);
+  opacity: 0.2;
+  z-index: 10;
+}
+#path-count {
+  display: flex;
+  color: #fff;
+  height: 3vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+#path-to-sort-switcher {
+  width: fit-content;
+  background-color: #222831;
+  margin: auto;
+  color: #fff;
+  font-size: 1em;
+  padding: 0.5vh 1vh;
+  cursor: pointer;
+  border-top: none;
+  border-bottom: none;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 4px;
+}
+#path-to-sort-switcher:hover {
+  background: rgb(8, 45, 77);
+}
+#title-base {
+  display: flex;
+  float: bottom;
+  width: 100vw;
+  flex-direction: column;
+  padding: auto;
+  justify-content: center;
+  text-align: center;
+  background-color: #222831;
+}
+#title-base span {
+  margin: auto;
+  font-size: 3em;
+  background-color: #222831;
+  color: #fff;
+}
+@keyframes nodeChange {
+  0% {
+    transform: scale(0.2);
+    border: 1px solid gray;
+    border-radius: 100%;
+    background-color: #e8e8e8;
+  }
+  50% {
+    transform: scale(1);
+    border: 1px solid gray;
+    border-radius: 0%;
+    background-color: #e8e8e8;
+  }
+  75% {
+    border: 1px solid gray;
+    transform: scale(1.2);
+  }
+  100% {
+    border: 1px solid gray;
+    border-radius: 0%;
+    transform: scale(1);
+  }
+}
+@keyframes shortestpathChange {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
