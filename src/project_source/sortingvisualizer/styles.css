@@ -65,7 +65,7 @@
 .container {
   display: flex;
   flex: 1;
-  padding: 8vh 10vh 0vh 10vh;
+  padding: 3% 3% 0% 3%;
   background: #fff;
   align-items: flex-end;
   justify-content: center;
